@@ -1,4 +1,7 @@
-export default {
+import 'styled-components/native'
+import { Theme } from './types';
+
+export const theme: Theme = {
   COLORS: {
     WHITE: '#FFFFFF',
 
@@ -27,3 +30,5 @@ export default {
     XL: 24
   }
 };
+
+export type ThemeType = typeof theme;
