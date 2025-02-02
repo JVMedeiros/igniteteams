@@ -1,9 +1,14 @@
 import { GroupCard } from '@components/GroupCard';
 import { Header } from '@components/Header';
 import { Highlight } from '@components/Highlight';
+import { useState } from 'react';
+import { FlatList } from 'react-native';
 import { Container } from './styles';
 
 export function Groups() {
+  const [groups, setGroups] = useState<string[]>(['Portal sem empresas', 'Desconecta', 'Cockpique'])
+
+
   return (
     <Container>
       <Header />
@@ -11,8 +16,15 @@ export function Groups() {
         title='Turmas'
         subtitle='jogue com a sua turma'
       />
-
-      <GroupCard title='Inimigos do podcast'/>
+      <FlatList 
+        data={groups}
+        keyExtractor={item => item}
+        renderItem={({ item }) => (
+          <GroupCard 
+            title={item}
+          />
+        )}
+      />
     </Container>
   );
 }
