@@ -25,7 +25,7 @@ export const HeaderList = styled.View`
   margin: 32px 0 12px;
 `;
 
-export const NumbersOfPlayers = styled.View`
+export const NumberOfPlayers = styled.View`
   ${({ theme }) => css`
     color: ${theme.COLORS.GRAY_200};
     font-size: ${theme.FONT_SIZE.SM}px;
