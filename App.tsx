@@ -21,7 +21,7 @@ export default function App() {
       />
       {
         fontsLoaded ?
-        <Players /> :
+        <Groups /> :
         <Loading />
       }
     </ThemeProvider>
